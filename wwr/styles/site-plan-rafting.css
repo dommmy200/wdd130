@@ -320,7 +320,7 @@ nav a:hover {
   padding: 0;
   justify-self: center;
 }
-
+/* Camping, Hiking and Lodging icons layouts*/
 .container-image {
   flex: 1;
   display: flex;
@@ -381,6 +381,73 @@ nav a:hover {
 }
 .not-wanted {
   display: none;
-}.family-nav {
+}
+.family-nav {
   margin-top: 10px;
+}
+
+@media screen and (max-width: 900px) { 
+  /* Layout for smaller screen for the 'Family Outing' page.*/
+  header {
+    padding: 1em;
+    text-align: center;
+    color: var(--headline-color-on-color);
+    background-color: var(--paragraph-background-color);
+    border-radius: 5px;
+  }
+  header > h1, header > h2 {
+    color: var(--headline-color-on-color);
+  }
+
+  .container-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 100%;
+    border-radius: 5px;
+    align-items: center;
+  }
+  .left-image > p, .right-image > p, .middle-image > p {
+    color: var(--headline-color-on-white);
+    font-family: fantasy;
+    padding: 0;
+    margin: 0 auto;
+    
+  }
+  .left-image, .middle-image, .right-image {
+    flex: 1;
+    width: 25%;
+    border: #ed0808 solid 2px;
+    background-color: var(--nav-link-color);
+    border-radius: 30px;
+    
+  }
+  .family-hero {
+    flex: 1;
+    margin: auto;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column; 
+    row-gap: 5px;
+    align-items: center;
+  }
+  .family-hero-image2 .icon2, .family-hero-image1 .icon1 {
+    border-top: 3px solid red;
+    border-right: 3px solid red;
+    border-left: 3px solid red;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    grid-column: 5;
+    grid-row: 6;
+    cursor: pointer;
+  }
+  .family-nav {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+   margin: 10px auto;
+  }
+
 }
