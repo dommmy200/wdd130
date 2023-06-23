@@ -226,9 +226,6 @@ section, .msg, #background, .mountains{
     grid-column: 1/4;
     grid-row: 1/7;
 }
-.fork{
-
-}
 
 
 @media screen and (max-width: 900px) {
