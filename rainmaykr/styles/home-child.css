@@ -2,11 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Barlow:wght@200;400&family=Comfortaa&family=Open+Sans&display=swap');
 
 :root {
-    /* Color Palette */
+    /* Color Palette 
     --primary-color: #f8f7f1;
     --secondary-color: #c4c9ba;
     --accent1-color: #869888;
     --accent2-color: #32533d;
+    */
+    /* Color Palette */
+    --primary-color: #ffffff;
+    --secondary-color: #c2c2c3;
+    --accent1-color: #79797c;
+    --accent2-color: #27272b;
+
   
     /* Chosen fonts */
     --heading-font: "Bad Script", Arial, sans-serif;
@@ -14,15 +21,15 @@
     --other-font: Barlow, Arial, sans-serif;
   
     /* Chosen from palette colors */
-    --headline-color-on-white: #c4c9ba;  /* headlines on a white background */ 
-    --headline-color-on-color: #f8f7f1; /* headlines on a colored background */ 
-    --paragraph-color-on-white: #c4c9ba; /* paragraph text on a white background */ 
-    --paragraph-color-on-color: #f8f7f1; /* paragraph text on a colored background */ 
-    --paragraph-background-color: #869888  ;
-    --nav-link-color: #f8f7f1;
-    --nav-background-color: #32533d;
-    --nav-hover-link-color: #c4c9ba;
-    --nav-hover-background-color: #869888;
+    --headline-color-on-white: #c2c2c3;  /* headlines on a white background */ 
+    --headline-color-on-color: #ffffff; /* headlines on a colored background */ 
+    --paragraph-color-on-white: #27272b; /* paragraph text on a white background */ 
+    --paragraph-color-on-color: #ffffff; /* paragraph text on a colored background */ 
+    --paragraph-background-color: #79797c;
+    --nav-link-color: #c2c2c3;
+    --nav-background-color: #27272b;
+    --nav-hover-link-color: #27272b;
+    --nav-hover-background-color: #c2c2c3;
 }
 /* Set the rules for the body section... */
 body {
@@ -38,7 +45,7 @@ body {
 .header-section {
     /* background: url(..//images/rm-homepage.png) no-repeat center #eee; */
 
-    border-radius: 15px;
+    border-radius: 10px;
     outline: 2px solid var(--accent2-color);
     
     display: grid;
@@ -49,7 +56,7 @@ body {
 .header-bg-image {
     grid-column: 1 / span 3;
     grid-row: 1 / span 3;
-    border-radius: 15px;
+    border-radius: 10px;
     width: 100%;
     height: 100%;
     object-fit: fill;
@@ -77,7 +84,7 @@ body {
 
     width: 100%;
     height: 80%;
-    border-radius: 12px;
+    border-radius: 10px;
 
     background-color: rgba(0, 0, 0, 0.4);
     color: var(--headline-color-on-color);
@@ -97,6 +104,8 @@ body {
 
     display: flex;
     flex-direction: row;
+    font-family: "Comfortaa";
+    font-size: 15px;
 }
 .header-bottom1 {
     flex: 2;
@@ -108,14 +117,18 @@ body {
     padding-top: 40px;
     border-radius: 0 0 10px 0; 
 }
+.header-bottom1 > .a1,
+.header-bottom1 > .a2,
+.header-bottom1 > .a3 {
+    font-size: small;
+}
 .header-bottom1, .header-bottom2 {
     background-color: rgba(0, 0, 0, 0.498);
-
 }
 .header-bottom1 > a, .header-bottom2 > a {
     color: var(--headline-color-on-white);
     padding: 0 20px;
-    outline: 2px solid var(--accent2-color);
+    outline: 2px solid var(--accent1-color);
     background-color: var(--nav-background-color);
     opacity: 0.7;
     border-radius: 10px;
@@ -123,13 +136,14 @@ body {
 }
 .header-bottom1 > a:hover, .header-bottom2 > a:hover {
     background-color: var(--nav-hover-background-color);
-    color: var(--accent2-color);
+    color: var(--accent1-color);
 }
 /* Set the rules for the main section... */
 
 .home-main {
     width: 100%;
-    border-radius: 15px; 
+    border-radius: 10px;
+    margin-bottom: 25px;
     
     display: grid;
     grid-template-columns: 10px auto 10px;
@@ -139,7 +153,7 @@ body {
     grid-column: 1 / span 3;
     height: 100%;
    
-    border-radius: 15px;
+    border-radius: 10px;
 
 
     display: grid;
@@ -152,22 +166,25 @@ body {
     grid-column: 1 / span 2;
     grid-row: 1 / span 1;
     outline: 2px solid var(--accent2-color);
-    border-radius: 15px;
+    border-radius: 10px;
     margin-bottom: 10px;
     max-height: max-content;
+    background-color: var(--secondary-color);
+    color: var(--accent2-color);
 }
 .bottom-section {
     grid-column: 1 / span 2;
     grid-row: 2 / span 1;
     
-    border-radius: 15px;
+    border-radius: 10px;
+    margin-bottom: -5px;
 
     display: grid;
     grid-template-columns: 1fr auto 1fr;
 }
 .purpose-div {
     background-color: var(--accent1-color);
-    border-radius: 15px;
+    border-radius: 10px;
    
 }
 .vertical-div {
@@ -176,36 +193,30 @@ body {
     width: 15px;
     outline: 2px solid var(--accent2-color);
     border-radius: 10px;
-    background-color: #869888;
+    background-color: var(--accent1-color);
     width: 5px;
     margin: 5px
-
-    /*.vertical {
-    width: 70px;
-    height: 5px;
-    position: relative;
-
-    border-radius: 4px;
-    transform: rotate(90deg);
-    background: black;
-    } */
 }
 .horizontal3 {
     grid-column: 1 / span 3;
     outline: 2px solid var(--accent2-color);
     border-radius: 10px;
-    background-color: #869888;
+    background-color: var(--accent1-color);
     width: 100%;
     height: 5px;
     margin-top: 15px;
 }
 .audience-div  {
     background-color:var(--accent1-color);
-    border-radius: 15px;
+    border-radius: 10px;
 }
 .audience-div, .purpose-div {
     font-family: "Bad Script";
-    opacity: 0.7;
+    font-size: smaller;
+    text-align: left;
+    padding: 0 10px;
+    background-color: var(--accent2-color);
+    color: var(--secondary-color);
 }
 .purpose-div > h3, .audience-div > h3, .top-section > h2 {
     text-decoration: underline;
@@ -215,12 +226,12 @@ body {
     font-family: "Barlow";
 }
 .top-section > p {
-    color: #869888;
+    font-size: small;
 }
 .main-image {
    grid-area: 1/1/5/5;
     outline: 2px solid var(--accent2-color);
-    border-radius: 15px;
+    border-radius: 10px;
     width: 100%;
     height: 100%;
     margin-top: 15px;
@@ -231,7 +242,7 @@ body {
    grid-area: 4/4/5/5;
     width: 92%;
     height: 30vh;
-    border-radius: 15px;
+    border-radius: 10px;
     margin-right: 10px;
 }
 .below-section {
@@ -243,14 +254,113 @@ body {
 }
 .horizontal1, .horizontal2 {
     position: relative;
-    top: 20px;
+    top: px;
     border-radius: 4px;
     height: 5px;
     background: var(--accent2-color);
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+}
+/* Set rules for the main section of the 1st child page */
+#sf-dev {
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
+    border-radius: 10px;
+    background-color:#444;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    z-index: -1;
+
+}
+.north-west {
+    z-index: 2;
+    grid-column: 1 / 3;
+    grid-row: 1 / 7;
+    margin: 5px 0 0 5px;
+    
+}
+.west-top {
+    flex: 3;
+    background: url(..//images/rm-softdev.png);
+    background-size: cover;
+}
+.west-bottom {
+    flex: 2;
+    background-color: var(--accent2-color);
+    color: var(--headline-color-on-color);
+    font-family: 'Comfortaa';
+    font-size: small;
+}
+.west-bottom > .p1 {
+    text-decoration: underline var(--accent1-color);
+}
+.west-bottom > .p3 {
+    text-align: right;
+    font-size: smaller;
+    padding-right: 6px;
+}
+.three-boxes {
+    grid-column: 3 / 6;
+    grid-row: 1 / 9;
+    height: inherit;
+    margin: 5px;
+    z-index: 2;
+}
+.south-image {
+    grid-column: 1 / 6;
+    grid-row: 7 / 10;
+    background: url(..//images/rm-softdev2.png);
+    background-size: cover;
+    z-index: 1;
+    text-align: left;
+    margin: 5px;
+}
+.south-image > p {
+    background: rgba(rgba(0, 0, 0));
+    color: var(--headline-color-on-color);
+    margin: 0 6rem;
+}
+.south-image > .p2 {
+    margin-left: 103px;
+}
+.west-top > p {
+    border-radius: 5px;
+    color: white;
+    margin-left: 6rem;
+}
+.top , .east {
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+.box {
+    flex: 1;
+    display: flex;
+    border-radius: 5px;
+    background-color: var(--accent1-color);
+    color: var(--accent2-color);
+}
+.box > h5 {
+    flex: 1;
+    place-self: center;
+    font-size: 12px;
+   
+}
+.box > p {
+    flex: 3;
+    place-self: left;
+    font-size: 11px;
+    text-align: left;
+    padding-right: 3px;
+}
+
+.west-top:nth-child(1) {
+    border-radius: 5px;
 }
 /* Set the rules for the footer section... */
-
 #main-footer {
     width: 100%;
     height: 250px;
@@ -260,8 +370,8 @@ body {
     grid-template-rows: 1fr 3fr;
 
     border-radius: 15px;
-    outline: #32533d;
-    background-color:#c4c9ba;
+    outline: 2px solid var(--accent2-color);
+    background-color: var(--headline-color-on-white);
 }
 .footer-nav {
     grid-column: 1/6;
@@ -278,22 +388,25 @@ body {
     padding-top: 5px;
 
     background-color: var(--accent2-color);
+    outline: 2px solid var(--accent1-color);
+    color: var(--accent1-color);
+    
     height: 20px;
     width: 170px;
     margin-left: 20px;
     margin-right: 20px;
 
-    color: var(--accent1-color);
     font-family: "Comfortaa";
     font-size: 12px;
     opacity: 0.9;
     border-radius: 7px;
-    outline: 2px solid var(--accent1-color);
     text-decoration: none;
 }
 .footer-nav > a:hover {
-    background-color: var(--accent2-color);
-    color: var(--accent1-color);
+    background-color: var(--accent1-color);
+    outline: 2px solid var(--accent2-color);
+    color: var(--accent2-color);
+
     opacity: 0.5;
     border-radius: 7px;
 }
@@ -315,7 +428,7 @@ body {
     height: auto;
     background-color: var(--accent2-color);
     margin: 10px;
-    border: 2px solid #729175;
+    border: 2px solid var(--accent1-color);
     border-radius: 15px;
 
     display: grid;
@@ -346,7 +459,7 @@ body {
     height: auto;
     background-color: var(--accent2-color);
     margin: 12px;
-    outline: 2px solid #729175;
+    outline: 2px solid var(--accent1-color);
     border-radius: 15px;
 
     display: grid;
@@ -374,8 +487,8 @@ body {
     font-size: 13px;
 
     padding-left: 0;
-    padding-right: 22px;
-    margin-left: -35px;
+    padding-right: 29px;
+    margin-left: -39px;
 }
 .div2-child2 {
     width: 100%;
@@ -396,8 +509,8 @@ body {
 
     height: auto;
     font-size: 10px;
-    background-color: #869888;
-    color: #304d34;
+    background-color: var(--accent1-color);
+    color: var(--accent2-color);
     text-decoration: none;
 
     border-radius: 10px;
