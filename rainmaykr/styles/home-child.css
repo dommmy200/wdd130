@@ -2,12 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Barlow:wght@200;400&family=Comfortaa&family=Open+Sans&display=swap');
 
 :root {
-    /* Color Palette 
-    --primary-color: #f8f7f1;
-    --secondary-color: #c4c9ba;
-    --accent1-color: #869888;
-    --accent2-color: #32533d;
-    */
     /* Color Palette */
     --primary-color: #ffffff;
     --secondary-color: #c2c2c3;
@@ -31,27 +25,27 @@
     --nav-hover-link-color: #27272b;
     --nav-hover-background-color: #c2c2c3;
 }
+
 /* Set the rules for the body section... */
-body {
+html, body {
     max-width: 1200px;
-    min-height: 100%;
-    margin: 0 auto;
-    padding: 4em;
-    font-size: 18px;
+    height: 100%;
+    margin: 5px auto;
+    padding: 0 2rem;
+    font-size: 24px;
     text-align: center;
     background-color: var(--paragraph-color-on-color);
   }
   /* Set the rules for the header section... */
 .header-section {
     /* background: url(..//images/rm-homepage.png) no-repeat center #eee; */
-
+    height: 100%;
     border-radius: 10px;
     outline: 2px solid var(--accent2-color);
     
     display: grid;
     grid-template-columns: 100px auto 100px;
     grid-template-rows: 100px auto 100px;
-
 }
 .header-bg-image {
     grid-column: 1 / span 3;
@@ -62,15 +56,15 @@ body {
     object-fit: fill;
 }
 .head-logo {
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
     margin-top: 10px;
     border-radius: 50%;
 }
 .header-logo {
-    height: 80px;
-    width: 90px;
-    margin: 0;
+    height: 120px;
+    width: 120px;
+    margin: 15px 0 0 15px;
 
     text-align: center;
 
@@ -84,19 +78,21 @@ body {
 
     width: 100%;
     height: 80%;
+
     border-radius: 10px;
 
     background-color: rgba(0, 0, 0, 0.4);
     color: var(--headline-color-on-color);
 
-    margin: 0%;
+    margin-top: 50px;
     padding-top: 1em;
     padding-bottom: 0;
 }
 .header-top > ul {
     padding: 0;
+    margin-top: 5rem;
     line-height: 50px;
-    font-size: 35px;
+    font-size: 45px;
     list-style-type: none;
 }
 .header-bottom {
@@ -105,7 +101,7 @@ body {
     display: flex;
     flex-direction: row;
     font-family: "Comfortaa";
-    font-size: 15px;
+    font-size: 20px;
 }
 .header-bottom1 {
     flex: 2;
@@ -120,7 +116,7 @@ body {
 .header-bottom1 > .a1,
 .header-bottom1 > .a2,
 .header-bottom1 > .a3 {
-    font-size: small;
+    font-size: 20px;
 }
 .header-bottom1, .header-bottom2 {
     background-color: rgba(0, 0, 0, 0.498);
@@ -254,15 +250,14 @@ body {
 }
 .horizontal1, .horizontal2 {
     position: relative;
-    top: px;
     border-radius: 4px;
     height: 5px;
     background: var(--accent2-color);
     margin-bottom: 10px;
 }
 /* Set rules for the main section of the 1st child page */
-#sf-dev {
-    height: 100%;
+#sw-dev {
+    height: auto;
     max-width: 1200px;
     margin: 0 auto;
     padding: 1em;
@@ -279,11 +274,14 @@ body {
     z-index: 2;
     grid-column: 1 / 3;
     grid-row: 1 / 7;
+
     margin: 5px 0 0 5px;
     
 }
+
 .west-top {
     flex: 3;
+
     background: url(..//images/rm-softdev.png);
     background-size: cover;
 }
@@ -292,7 +290,7 @@ body {
     background-color: var(--accent2-color);
     color: var(--headline-color-on-color);
     font-family: 'Comfortaa';
-    font-size: small;
+    font-size: 24px;
 }
 .west-bottom > .p1 {
     text-decoration: underline var(--accent1-color);
@@ -312,6 +310,8 @@ body {
 .south-image {
     grid-column: 1 / 6;
     grid-row: 7 / 10;
+
+    height: 350px;
     background: url(..//images/rm-softdev2.png);
     background-size: cover;
     z-index: 1;
@@ -321,10 +321,10 @@ body {
 .south-image > p {
     background: rgba(rgba(0, 0, 0));
     color: var(--headline-color-on-color);
-    margin: 0 6rem;
+    margin: 5px 6rem;
 }
 .south-image > .p2 {
-    margin-left: 103px;
+    margin-left: 151px;
 }
 .west-top > p {
     border-radius: 5px;
@@ -342,17 +342,18 @@ body {
     border-radius: 5px;
     background-color: var(--accent1-color);
     color: var(--accent2-color);
+    outline: 2px solid #27272b;
 }
 .box > h5 {
     flex: 1;
     place-self: center;
-    font-size: 12px;
+    font-size: 24px;
    
 }
 .box > p {
     flex: 3;
-    place-self: left;
-    font-size: 11px;
+    place-self: center;
+    font-size: 18px;
     text-align: left;
     padding-right: 3px;
 }
@@ -363,7 +364,7 @@ body {
 /* Set the rules for the footer section... */
 #main-footer {
     width: 100%;
-    height: 250px;
+    height: 50%;
 
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -391,13 +392,14 @@ body {
     outline: 2px solid var(--accent1-color);
     color: var(--accent1-color);
     
-    height: 20px;
-    width: 170px;
+    height: 25px;
+    width:300px;
+    padding: 10px;
     margin-left: 20px;
     margin-right: 20px;
 
     font-family: "Comfortaa";
-    font-size: 12px;
+    font-size: 18px;
     opacity: 0.9;
     border-radius: 7px;
     text-decoration: none;
@@ -439,6 +441,7 @@ body {
 
     align-self: center;
     margin-left: 15px;
+
     width: 80px;
     height: 80px;
 }
@@ -446,6 +449,7 @@ body {
     width: max-content;
     height: max-content;
     align-self: center;
+    margin-left: -110px;
     padding: 70px 70px 9px 0;
     grid-column: 2/4;
 
@@ -472,9 +476,20 @@ body {
     grid-row: 1/3;
 
     text-align: start;
-    font-size: 55px;
+    font-size: 100px;
     font-weight: 950;
     color: var(--accent1-color);
+    margin-top: -2px;
+    margin-left: 24px;
+}
+.div2-child1:hover {
+    grid-column: 1/4;
+    grid-row: 1/3;
+
+    text-align: start;
+    font-size: 70px;
+    font-weight: 950;
+    color: var(--headline-color-on-color);
     margin-top: -2px;
     margin-left: 17px;
 }
@@ -484,11 +499,11 @@ body {
 
     transform: rotate(90deg);
 
-    font-size: 13px;
+    font-size: 15px;
 
     padding-left: 0;
     padding-right: 29px;
-    margin-left: -39px;
+    margin-left: -42px;
 }
 .div2-child2 {
     width: 100%;
@@ -503,12 +518,12 @@ body {
 .div2-child2 > a {
     align-self: center;
     justify-self: center;
-
-    width: 40px;
+    
+    width: 50px;
     margin: 0;
 
-    height: auto;
-    font-size: 10px;
+    height: 70px;
+    font-size: 13px;
     background-color: var(--accent1-color);
     color: var(--accent2-color);
     text-decoration: none;
@@ -523,7 +538,15 @@ body {
     border-radius: 7px;
 
 }
+.div2-child2 > a:hover {
+    background-color: var(--accent2-color);
+    outline: 2px solid var(--headline-color-on-color);
+    color: var(--accent1-color);
 
-
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.div2-child2 > a > img:hover { order: 2;}
+.div2-child2 > a > p:hover { order: 1;}
 
